@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "algomaker-onboarding": {
+      "type": "http",
+      "url": "https://algomakers.com/mcp"
+    },
+    "algomaker-motor": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": ["--python", "3.11", "--from", "https://algomakers.com/claude/mm_engine-0.0.151-cp311-none-any.whl", "mm-engine", "--mcp"]
+    }
+  }
+}
