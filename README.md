@@ -1,5 +1,24 @@
 # AlgoMaker — plugin para Claude Code
 
+**AlgoMaker is a Model Context Protocol (MCP) server for quantitative trading.** Your AI agent
+downloads market data, mines and validates algorithmic trading strategies (out-of-sample gates,
+walk-forward, Monte Carlo), builds a portfolio and paper-trades it — with the engine running on
+your own machine, not on our servers. Orders with real money and broker API keys never pass
+through the agent: they happen on a screen of yours.
+
+| | |
+|---|---|
+| Remote MCP endpoint | `https://algomakers.com/mcp` (streamable HTTP) |
+| Official MCP Registry | `com.algomakers/algomaker` |
+| Claude Code | `/plugin marketplace add https://algomakers.com/claude/marketplace.json` |
+| Engine (41 tools) | `uvx --python 3.11 --from https://algomakers.com/claude/mm_engine-0.0.152-cp311-none-any.whl mm-engine --mcp` |
+| Manual | <https://algomakers.com/claude/manual> |
+
+*The rest of this file, and the product itself, are in Portuguese.*
+
+---
+
+
 Instala em qualquer Claude Code (Windows, macOS, Linux):
 
     /plugin marketplace add https://algomakers.com/claude/marketplace.json
