@@ -11,7 +11,7 @@ through the agent: they happen on a screen of yours.
 | Remote MCP endpoint | `https://algomakers.com/mcp` (streamable HTTP) |
 | Official MCP Registry | `com.algomakers/algomaker` |
 | Claude Code | `/plugin marketplace add https://algomakers.com/claude/marketplace.json` |
-| Engine (41 tools) | `uvx --python 3.11 --from https://algomakers.com/claude/mm_engine-0.0.153-cp311-none-any.whl mm-engine --mcp` |
+| Engine (42 tools) | `uvx --python 3.11 --from https://algomakers.com/claude/mm_engine-0.0.154-cp311-none-any.whl mm-engine --mcp` |
 | Manual | <https://algomakers.com/claude/manual> |
 
 *The rest of this file, and the product itself, are in Portuguese.*
