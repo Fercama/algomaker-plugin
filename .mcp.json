@@ -7,7 +7,7 @@
     "algomaker-motor": {
       "type": "stdio",
       "command": "uvx",
-      "args": ["--python", "3.11", "--from", "https://algomakers.com/claude/mm_engine-0.0.154-cp311-none-any.whl", "mm-engine", "--mcp"]
+      "args": ["--python", "3.11", "--from", "https://algomakers.com/claude/mm_engine-0.0.155-cp311-none-any.whl", "mm-engine", "--mcp"]
     }
   }
 }
