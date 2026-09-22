@@ -1,7 +1,7 @@
 {
   "name": "algomaker",
-  "description": "AlgoMaker — fábrica de estratégias quantitativas que roda na sua máquina. O plugin traz o conector de entrada (o que é, como instalar, como a licença funciona), o MOTOR completo (44 ferramentas: dados, minerar, validar, compor carteira, simular em papel, ativar licença — via uvx, sem instalador; precisa do uv) e a doutrina da fábrica.",
-  "version": "1.3.7",
+  "description": "AlgoMaker — fábrica de estratégias quantitativas que roda na sua máquina. O plugin traz o conector de entrada (o que é, como instalar, como a licença funciona), o MOTOR completo (47 ferramentas: montar a estrutura do cliente, dados, minerar, validar, compor carteira, simular em papel, ativar licença — via uvx, sem instalador; precisa do uv) e a doutrina da fábrica.",
+  "version": "1.4.2",
   "author": {
     "name": "AlgoMakers",
     "url": "https://algomakers.com"
