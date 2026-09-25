@@ -58,6 +58,14 @@ chave.** Sem chave, o caminho é https://algomakers.com/comprar.
 - Respostas grandes: peça `campos: [...]`; `_omitido` significa que o dado existe e foi
   cortado para caber, não que falta.
 
+## O Chip: a doutrina inteira sai do motor
+
+Este arquivo é o cartão de entrada. A doutrina completa — entrevista do mandato, regime por
+ativo, universo medido no book, preset, funil, composição, validade, travas, checkpoint,
+troca de safra e a rotina passo a passo — é servida pelo próprio motor: chame `chip` uma vez
+no início da sessão (e `chip` com `secao` para reler uma parte na hora certa). O prompt
+`rotina-do-agente` começa por ele. Não peça ao cliente para colar documento nenhum.
+
 ## A tela: `painel_abrir`
 
 O motor serve a interface completa do app (Monitor, Fábrica, Databank, Conexões, VPS) no
