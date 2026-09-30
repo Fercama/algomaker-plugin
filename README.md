@@ -31,13 +31,15 @@ O que entra:
 - **Motor** `algomaker-motor` (41 ferramentas): dados, minerar, validar, compor carteira, simular
   em papel, ativar licença — roda na sua máquina via `uvx` (Mac, Linux, Windows). Precisa do
   `uv` instalado antes: `curl -LsSf https://astral.sh/uv/install.sh | sh` (Mac/Linux) ou
-  `winget install astral-sh.uv` (Windows). Sem `uv`, só este servidor falha; o resto do plugin
+  `powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"` (Windows,
+  inclusive Windows Server). Sem `uv`, só este servidor falha; o resto do plugin
   continua.
 - **Skill `algomaker`**: a doutrina — as três frases que iniciam tudo, o que o agente nunca faz,
   e como ler o Monitor.
 
-No Windows com o app AlgoMaker instalado, o próprio app registra o motor ao abrir; o do plugin
-não conflita (a ponte usa o app quando ele está aberto).
+Não existe aplicativo para baixar: em Windows, Mac e Linux instala-se só o motor, e a tela é o
+painel que ele serve no navegador, em `127.0.0.1`. O programa antigo de janela do Windows foi
+descontinuado; se ainda estiver instalado, feche-o e não abra mais.
 
 Claude Desktop / claude.ai (sem plugin): *Configurações → Conectores → Adicionar conector
 personalizado* com a URL `https://algomakers.com/mcp`; o motor, nesse caso, pela linha do `uvx`
@@ -48,7 +50,7 @@ que `algomaker_instalar` devolve.
 O conector remoto só devolve texto: ele não alcança seu computador, não confere chave e não
 executa nada. O motor roda **local**, no seu processador, e é ele que baixa dados, minera,
 testa e simula. Ordem com dinheiro real e cadastro de chave de corretora **não** passam pelo
-agente: acontecem numa tela sua, no app ou no painel local em `127.0.0.1`.
+agente: acontecem numa tela sua, o painel local em `127.0.0.1`.
 
 ## Privacy Policy
 

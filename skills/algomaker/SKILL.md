@@ -1,6 +1,6 @@
 ---
 name: algomaker
-description: Como operar a fábrica de estratégias AlgoMaker pelo chat — o que é grátis, as três frases que iniciam tudo, o que o agente nunca faz, e como distinguir "app não instalado" de "app instalado". Use quando o usuário mencionar AlgoMaker, minerar estratégias, carteira quantitativa, Bybit, licença do AlgoMaker, ou quando as ferramentas algomaker_* / mine_* / portfolio_* / exec_* estiverem disponíveis.
+description: Como operar a fábrica de estratégias AlgoMaker pelo chat — o que é grátis, as três frases que iniciam tudo, o que o agente nunca faz, e como distinguir "motor não instalado" de "motor instalado". Use quando o usuário mencionar AlgoMaker, minerar estratégias, carteira quantitativa, Bybit, licença do AlgoMaker, ou quando as ferramentas algomaker_* / mine_* / portfolio_* / exec_* estiverem disponíveis.
 ---
 
 # AlgoMaker — doutrina para o agente do cliente
@@ -8,9 +8,10 @@ description: Como operar a fábrica de estratégias AlgoMaker pelo chat — o qu
 ## Em que passo ele está (decida ANTES de responder)
 
 - Só existem ferramentas `algomaker_*` → o motor **não está ligado** nesta máquina. Chame
-  `algomaker_comecar`; se ele perguntar de instalação, `algomaker_instalar` (passe `sistema`:
-  em macOS/Linux a resposta é UMA linha de terminal com `uvx`, sem instalador).
-- Existem `mine_preflight`, `portfolio_estrutura`, `licenca_status`, `exec_status` → o app está
+  `algomaker_comecar`; para instalar, `algomaker_instalar` (passe `sistema`) e RODE os comandos
+  que ele devolve. **Não existe aplicativo para baixar**, em nenhum sistema: instala-se só o
+  motor, pelo `uv`, e a tela é o painel no navegador. Nunca mande o cliente baixar um programa.
+- Existem `mine_preflight`, `portfolio_estrutura`, `licenca_status`, `exec_status` → o motor está
   instalado e o conector completo registrado. Este skill vale para os dois casos.
 
 ## O que é grátis e o que pede licença
@@ -44,7 +45,7 @@ chave.** Sem chave, o caminho é https://algomakers.com/comprar.
 ## O que o agente NUNCA faz — por arquitetura, não por promessa
 
 - Armar modo LIVE, cadastrar chave de corretora, mexer nas travas de risco: só o dono, na
-  tela do app (ou na página local de confirmação). Duas camadas bloqueiam.
+  tela (o painel local, ou a página local de confirmação). Duas camadas bloqueiam.
 - Destravar um kill-switch. Encerrar tudo em emergência PODE (`exec_kill`).
 - Enviar ordem por conta própria, mesmo "de teste".
 
@@ -68,9 +69,10 @@ no início da sessão (e `chip` com `secao` para reler uma parte na hora certa).
 
 ## A tela: `painel_abrir`
 
-O motor serve a interface completa do app (Monitor, Fábrica, Databank, Conexões, VPS) no
+O motor serve a interface completa (Monitor, Fábrica, Databank, Conexões, VPS) no
 navegador, em `127.0.0.1`, em qualquer sistema. Quando o cliente disser "abre o painel" — ou
 quando algo for recusado com "na tela" — chame `painel_abrir` e **entregue o link** (uso
 único, 5 min). Você nunca abre o link, nunca pede chave de corretora no chat: chave, armar
 dinheiro real e fechar posição são feitos por ele, na tela. O painel continua rodando depois
-da conversa; se o app Windows estiver aberto, a resposta diz que a tela é o app.
+da conversa. Logo depois de instalar, chame também `painel_arranque`: a tela volta sozinha
+quando o computador reinicia.
