@@ -71,8 +71,11 @@ no início da sessão (e `chip` com `secao` para reler uma parte na hora certa).
 
 O motor serve a interface completa (Monitor, Fábrica, Databank, Conexões, VPS) no
 navegador, em `127.0.0.1`, em qualquer sistema. Quando o cliente disser "abre o painel" — ou
-quando algo for recusado com "na tela" — chame `painel_abrir` e **entregue o link** (uso
-único, 5 min). Você nunca abre o link, nunca pede chave de corretora no chat: chave, armar
-dinheiro real e fechar posição são feitos por ele, na tela. O painel continua rodando depois
-da conversa. Logo depois de instalar, chame também `painel_arranque`: a tela volta sozinha
-quando o computador reinicia.
+quando algo for recusado com "na tela" — chame `painel_abrir`. **Uma chamada faz tudo:** sobe
+o painel se estiver parado, liga o arranque automático (a tela volta sozinha quando o
+computador reinicia) e abre a tela no navegador da máquina dele (`navegador_aberto: true`).
+Só entregue o link devolvido (uso único, 5 min) se `navegador_aberto` vier `false`. Você nunca
+abre o link, nunca pede chave de corretora no chat: chave, armar dinheiro real e fechar posição
+são feitos por ele, na tela. O painel continua rodando depois da conversa. A resposta traz
+`pendencias` (licença, mandato, corretora): é o seu próximo passo. `infra_montar` é só para um
+segundo ambiente isolado — nunca o primeiro passo.
