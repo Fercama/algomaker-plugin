@@ -31,7 +31,10 @@ chave.** Sem chave, o caminho é https://algomakers.com/comprar.
 2. **Carteira** — "monta uma carteira pra mim". Pergunte ONDE vai executar (`destino`:
    `bybit_api` | `mt5`) antes de `mine_preflight` → `mine_strategies` → `portfolio_run` →
    `deploy_paper`. Minerar no destino errado não dá erro: dá backtest aprovado com o custo da
-   corretora errada.
+   corretora errada. **Faltou história na API da Bybit** para o ativo pedido? A fonte reserva é o
+   terminal **MT5 da própria Bybit**: o cliente instala o Bybit MT5 e entra com a conta; você
+   importa com `rpc_write` em `data.mt5_import` (`{symbol, interval, days}`) e minera com
+   `destino: bybit_api`. O terminal é só fonte de dado; a execução é sempre pela API.
 3. **Acompanhamento** — "como está minha carteira?" → `exec_status`. Leia TRÊS coisas antes
    de concluir "conservador": `kpis.retorno_sobre_risco_pct` (P&L sobre o capital em risco),
    `ocupacao` (desenho vs modelo vs corretora — `gap_execucao_pct` alto = ordem não entra) e
